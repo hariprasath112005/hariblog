@@ -13,7 +13,7 @@ tags:
 
 !![Image Description](/images/Screenshot%20from%202024-12-07%2011-09-45.png)
 
-
+![[Pasted image 20251117173318.png]]
 
 # please work
 
