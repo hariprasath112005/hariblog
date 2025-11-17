@@ -11,7 +11,7 @@ tags:
 
 
 
-![[Pasted image 20251117173318.png]]
+!![Image](/images/Pasted%20image%2020251117173318.png)
 
 # please work
 

@@ -2,34 +2,39 @@ import os
 import re
 import shutil
 
-posts_dir = "/home/sams3pi0l/Documents/Obsidian Vault/picoCtf/blogs/"
+# Paths
+obsidian_posts = "/home/sams3pi0l/Documents/Obsidian Vault/picoCtf/blogs/"
 attachments_dir = "/home/sams3pi0l/Documents/Obsidian Vault/"
-static_images_dir = "/media/sams3pi0l/Hari/Projects/HariBlog/static/images/"
 
-REPO_NAME = "hariblog"   # IMPORTANT for GitHub Pages project sites
+hugo_posts = "/media/sams3pi0l/Hari/Projects/HariBlog/content/posts/"
+hugo_images = "/media/sams3pi0l/Hari/Projects/HariBlog/static/images/"
 
-for filename in os.listdir(posts_dir):
+for filename in os.listdir(obsidian_posts):
     if filename.endswith(".md"):
-        filepath = os.path.join(posts_dir, filename)
+        src_md = os.path.join(obsidian_posts, filename)
+        dest_md = os.path.join(hugo_posts, filename)
 
-        with open(filepath, "r") as file:
-            content = file.read()
+        # Copy markdown to Hugo
+        shutil.copy(src_md, dest_md)
 
-        # detect Obsidian embedded images [[image.png]]
+        # Process links in Hugo version
+        with open(dest_md, "r") as f:
+            content = f.read()
+
+        # Find all Obsidian wikilinks
         images = re.findall(r'\[\[([^]]*\.png)\]\]', content)
 
         for image in images:
-            web_path = f"/{REPO_NAME}/images/{image.replace(' ', '%20')}"
+            # Convert to relative Hugo link
+            hugo_markdown = f"![Image](/images/{image.replace(' ', '%20')})"
+            content = content.replace(f"[[{image}]]", hugo_markdown)
 
-            markdown_image = f"![Image Description]({web_path})"
-            content = content.replace(f"[[{image}]]", markdown_image)
+            # Copy image to static/images/
+            src_img = os.path.join(attachments_dir, image)
+            if os.path.exists(src_img):
+                shutil.copy(src_img, hugo_images)
 
-            # copy the image
-            image_source = os.path.join(attachments_dir, image)
-            if os.path.exists(image_source):
-                shutil.copy(image_source, static_images_dir)
+        with open(dest_md, "w") as f:
+            f.write(content)
 
-        with open(filepath, "w") as file:
-            file.write(content)
-
-print("DONE — images updated + copied correctly.")
+print("Done: Hugo posts updated, images copied.")
