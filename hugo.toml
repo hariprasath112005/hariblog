@@ -1,0 +1,20 @@
+baseurl = "/"
+languageCode = "en-us"
+theme = "LoveIt"
+
+title = "Hari's Blog"  # Remove global title
+
+[params]
+  title = "Hari's Blog"        # Remove LoveIt header title
+  description = " "  # Remove LoveIt subtitle
+
+  [params.header]
+    logo = ""	
+    title = ""
+    subtitle = ""
+
+  [params.author]
+    name = "Hariprasath"
+    email = "hariprasathcce@gmail.com"
+    link = ""
+
