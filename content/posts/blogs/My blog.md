@@ -10,4 +10,7 @@ tags:
 # podavenna
 
 
-!![Image Description](/images/Screenshot%20from%202024-11-23%2014-05-15.png)
+![[Screenshot from 2024-11-23 14-05-15.png]]
+
+# please work
+
