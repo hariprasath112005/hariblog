@@ -1,4 +1,5 @@
 baseurl = "https://hariprasath112005.github.io/hariblog/"
+#baseurl = "/"
 languageCode = "en-us"
 theme = "LoveIt"
 
