@@ -46,7 +46,7 @@ if [ ! -d "$destinationPath" ]; then
     exit 1
 fi
 
-rsync -av --delete "$sourcePath" "$destinationPath"
+
 
 # Step 3: Process Markdown files with Python script to handle image links
 echo "Processing image links in Markdown files..."
@@ -60,6 +60,7 @@ if ! python3 images.py; then
     exit 1
 fi
 
+rsync -av --delete "$sourcePath" "$destinationPath"
 # Step 4: Build the Hugo site
 echo "Building the Hugo site..."
 if ! hugo; then

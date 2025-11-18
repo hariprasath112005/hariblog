@@ -2,7 +2,7 @@ import os
 import re
 import shutil
 
-posts_dir = "/home/sams3pi0l/Documents/Obsidian Vault/picoCtf/blogs/"
+posts_dir = "/media/sams3pi0l/Hari/Projects/HariBlog/content/posts/blogs/"
 attachments_dir = "/home/sams3pi0l/Documents/Obsidian Vault/"
 static_images_dir = "/media/sams3pi0l/Hari/Projects/HariBlog/static/images/"
 
