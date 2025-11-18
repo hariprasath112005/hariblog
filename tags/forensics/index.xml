@@ -1,0 +1,28 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Forensics - Tag - Hari&#39;s Blog</title>
+        <link>https://hariprasath112005.github.io/hariblog/tags/forensics/</link>
+        <description>Forensics - Tag - Hari&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>hariprasathcce@gmail.com (Hariprasath)</managingEditor>
+            <webMaster>hariprasathcce@gmail.com (Hariprasath)</webMaster><lastBuildDate>Tue, 18 Nov 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://hariprasath112005.github.io/hariblog/tags/forensics/" rel="self" type="application/rss+xml" /><item>
+    <title>Flag in Flame - picoCtf </title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/</link>
+    <pubDate>Tue, 18 Nov 2025 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/</guid>
+    <description><![CDATA[Challenge Name - Flag in Flame - picoCtf Category:Forensics Difficulty:Easy
+Description The SOC team discovered a suspiciously large log file after a recent breach. When they opened it, they found an enormous block of encoded text instead of typical logs. Could there be something hidden within? Your mission is to inspect the resulting file and reveal the real purpose of it. The team is relying on your skills to uncover any concealed information within this unusual log.]]></description>
+</item>
+<item>
+    <title>Hidden in plainsight - picoCtf</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/hidden-in-plainsight/</link>
+    <pubDate>Tue, 18 Nov 2025 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/hidden-in-plainsight/</guid>
+    <description><![CDATA[Challenge Name - Hidden in plainsight - picoCtf Category: Forensics Difficulty: Easy
+Description You’re given a seemingly ordinary JPG image. Something is tucked away out of sight inside the file. Your task is to discover the hidden payload and extract the flag.Download the jpg image here.
+Hints Download the jpg image and read its metadata
+Step-by-Step Solution First when I download the image, I saw its metadata using exiftool. ExifTool Version Number : 13.]]></description>
+</item>
+</channel>
+</rss>

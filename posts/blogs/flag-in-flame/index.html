@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Flag in Flame - picoCtf  - Hari&#39;s Blog</title><meta name="Description" content=" "><meta property="og:url" content="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/">
+  <meta property="og:site_name" content="Hari&#39;s Blog">
+  <meta property="og:title" content="Flag in Flame - picoCtf ">
+  <meta property="og:description" content="Challenge Name - Flag in Flame - picoCtf Category:Forensics Difficulty:Easy
+Description The SOC team discovered a suspiciously large log file after a recent breach. When they opened it, they found an enormous block of encoded text instead of typical logs. Could there be something hidden within? Your mission is to inspect the resulting file and reveal the real purpose of it. The team is relying on your skills to uncover any concealed information within this unusual log.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-18T00:00:00+00:00">
+    <meta property="article:tag" content="PicoCtf">
+    <meta property="article:tag" content="Easy">
+    <meta property="article:tag" content="Forensics">
+    <meta property="article:tag" content="PicoMini-by-CMU-Africa">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Flag in Flame - picoCtf ">
+  <meta name="twitter:description" content="Challenge Name - Flag in Flame - picoCtf Category:Forensics Difficulty:Easy
+Description The SOC team discovered a suspiciously large log file after a recent breach. When they opened it, they found an enormous block of encoded text instead of typical logs. Could there be something hidden within? Your mission is to inspect the resulting file and reveal the real purpose of it. The team is relying on your skills to uncover any concealed information within this unusual log.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" /><link rel="prev" href="https://hariprasath112005.github.io/hariblog/posts/blogs/hidden-in-plainsight/" /><link rel="stylesheet" href="/hariblog/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Flag in Flame - picoCtf ",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/flag-in-flame\/"
+        },"genre": "posts","keywords": "PicoCtf, Easy, Forensics, picoMini-by-CMU-Africa","wordcount":  238 ,
+        "url": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/flag-in-flame\/","datePublished": "2025-11-18T00:00:00+00:00","dateModified": "2025-11-18T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Hariprasath"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Flag in Flame - picoCtf </h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-11-18">2025-11-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;238 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#challenge-name---flag-in-flame---picoctf">Challenge Name - Flag in Flame - picoCtf</a></li>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#hints">Hints</a></li>
+    <li><a href="#step-by-step-solution">Step-by-Step Solution</a></li>
+    <li><a href="#flag">Flag</a></li>
+    <li><a href="#tools-used">Tools Used</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="challenge-name---flag-in-flame---picoctf">Challenge Name - Flag in Flame - picoCtf</h2>
+<p><strong>Category</strong>:Forensics
+<strong>Difficulty</strong>:Easy</p>
+<h2 id="description">Description</h2>
+<blockquote>
+<p>The SOC team discovered a suspiciously large log file after a recent breach. When they opened it, they found an enormous block of encoded text instead of typical logs. Could there be something hidden within? Your mission is to inspect the resulting file and reveal the real purpose of it. The team is relying on your skills to uncover any concealed information within this unusual log.Download the encoded data here: <a href="https://challenge-files.picoctf.net/c_amiable_citadel/5da19ac1eabba5f0b9287e4a5675612e5bbffc68aaa8fa54c58ebd5ce81e29fd/logs.txt" target="_blank" rel="noopener noreffer ">Logs Data</a>. Be prepared—the file is large, and examining it thoroughly is crucial .</p>
+</blockquote>
+<h2 id="hints">Hints</h2>
+<blockquote>
+<p>Use <code>base64</code> to decode the data and generate the image file.</p>
+</blockquote>
+<h2 id="step-by-step-solution">Step-by-Step Solution</h2>
+<ol>
+<li>I first views the file and got a base64 value.</li>
+<li>The hint says to decode the data and generate as the image file.</li>
+<li>So i ran this command</li>
+</ol>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>cat logs.txt | base64 -d &gt;&gt; temp.jpg</code></pre></div>
+<ol start="4">
+<li>the <code>cat</code> gives the content in the file and it is piped to base64 tool and the <code>&gt;&gt;</code> symbol will save the resulting value to a jpg image.</li>
+</ol>
+<p>![[sad.jpg]]
+This is the resultant image.
+5. now we can see some text in the image and I copied it.
+6. I used this <a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener noreffer ">site</a> to decode the text. I used all the operations until i get the flag.</p>
+<p>![[Pasted image 20251118130712.png]]</p>
+<ol start="7">
+<li>As you can see the output is the flag.</li>
+</ol>
+<h2 id="flag">Flag</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>picoCTF{forensics_analysis_is_amazing_b9ac4cb9}</code></pre></div>
+<h2 id="tools-used">Tools Used</h2>
+<ul>
+<li>base64</li>
+<li><a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener noreffer ">CyberChef</a> - It has various operations for encoding and decoding.</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-11-18</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" data-title="Flag in Flame - picoCtf " data-hashtags="PicoCtf,Easy,Forensics,picoMini-by-CMU-Africa"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" data-title="Flag in Flame - picoCtf "><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" data-hashtag="PicoCtf"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" data-title="Flag in Flame - picoCtf "><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" data-title="Flag in Flame - picoCtf "><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" data-title="Flag in Flame - picoCtf "><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/" data-title="Flag in Flame - picoCtf " data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fhariprasath112005.github.io%2fhariblog%2fposts%2fblogs%2fflag-in-flame%2f&amp;text=Flag%20in%20Flame%20-%20picoCtf%20" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/hariblog/tags/picoctf/">PicoCtf</a>,&nbsp;<a href="/hariblog/tags/easy/">Easy</a>,&nbsp;<a href="/hariblog/tags/forensics/">Forensics</a>,&nbsp;<a href="/hariblog/tags/picomini-by-cmu-africa/">PicoMini-by-CMU-Africa</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/hariblog/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hariblog/posts/blogs/hidden-in-plainsight/" class="prev" rel="prev" title="Hidden in plainsight - picoCtf"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Hidden in plainsight - picoCtf</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.131.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/hariblog/js/theme.min.js"></script></body>
+</html>
