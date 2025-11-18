@@ -40,7 +40,7 @@ Hints You can use grep to filter only matching lines from the log. Some lines 
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/log-hunt\/"
-        },"genre": "posts","keywords": "PicoCtf, Easy, General-Skills, picoMini-by-CMU-Africa","wordcount":  151 ,
+        },"genre": "posts","keywords": "PicoCtf, Easy, General-Skills, picoMini-by-CMU-Africa","wordcount":  147 ,
         "url": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/log-hunt\/","datePublished": "2025-11-18T00:00:00+00:00","dateModified": "2025-11-18T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -93,7 +93,7 @@ Hints You can use grep to filter only matching lines from the log. Some lines 
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Log Hunt - PicoCtf</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-11-18">2025-11-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;151 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-11-18">2025-11-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;147 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -129,13 +129,27 @@ Some lines are duplicates; ignore extra occurrences.</p>
 <li>As the Hint says to use <code>grep</code> and filter the matching lines.</li>
 <li>So, I views the file. Output is very long.</li>
 </ol>
-<p>![[Pasted image 20251118121114.png]]</p>
+<p>!<img
+        class="lazyload"
+        src="/hariblog/svg/loading.min.svg"
+        data-src="/hariblog/images/Pasted%20image%2020251118121114.png"
+        data-srcset="/hariblog/images/Pasted%20image%2020251118121114.png, /hariblog/images/Pasted%20image%2020251118121114.png 1.5x, /hariblog/images/Pasted%20image%2020251118121114.png 2x"
+        data-sizes="auto"
+        alt="/hariblog/images/Pasted%20image%2020251118121114.png"
+        title="Image Description" /></p>
 <ol>
 <li>You can see the flag which has <code>INFO FLAGPART:</code></li>
 <li>We need to filter the results with <code>grep</code> tool and only filter the lines which has <code>INFO FLAGPART</code> in it.</li>
 <li>`cat server.log | grep &lsquo;INFO FLAGPART:&rsquo;</li>
 </ol>
-<p>![[Pasted image 20251118121540.png]]</p>
+<p>!<img
+        class="lazyload"
+        src="/hariblog/svg/loading.min.svg"
+        data-src="/hariblog/images/Pasted%20image%2020251118121540.png"
+        data-srcset="/hariblog/images/Pasted%20image%2020251118121540.png, /hariblog/images/Pasted%20image%2020251118121540.png 1.5x, /hariblog/images/Pasted%20image%2020251118121540.png 2x"
+        data-sizes="auto"
+        alt="/hariblog/images/Pasted%20image%2020251118121540.png"
+        title="Image Description" /></p>
 <ol start="6">
 <li>The flag is repeated, but we can easily copy the flag.</li>
 </ol>
