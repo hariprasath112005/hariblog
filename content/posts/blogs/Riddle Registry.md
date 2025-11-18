@@ -1,5 +1,5 @@
 ---
-title: Riddle Registry
+title: Riddle Registry - picoCtf
 date: 2025-11-17
 draft: false
 tags:
@@ -12,7 +12,7 @@ tags:
 **Category:** Forensics
 **Difficulty**: Easy
 
-# Description:
+## Description:
 
 
 >  Hi, intrepid investigator! 📄🔍 You've stumbled upon a peculiar PDF filled with what seems like nothing more than garbled nonsense. But beware! Not everything is as it appears. Amidst the chaos lies a hidden treasure—an elusive flag waiting to be uncovered.Find the PDF file here [Hidden Confidential Document](https://challenge-files.picoctf.net/c_amiable_citadel/3f00b89eeac6ac5242f747889ea4de24c804d9144cfa71e23d754e6a8e80e435/confidential.pdf) and uncover the flag within the metadata
@@ -25,7 +25,7 @@ The pdf file provided:
 !![Image Description](/hariblog/images/Pasted%20image%2020251118094747.png)
 
 
-# Solution: 
+## Solution: 
 
 1. The pdf content is not needed for this ctf, it is only a decoy.
 2. First I used `exiftool` to analyse the pdf and noticed this output.
@@ -56,9 +56,9 @@ Author                          : cGljb0NURntwdXp6bDNkX20zdGFkYXRhX2YwdW5kIV9jOT
 5. The base64 will decode it and `echo` returns the output.
 6. Finally got the output. `picoCTF{puzzl3d_m3tadata_f0und!_c999e2a4}`
 
-# Flag : `picoCTF{puzzl3d_m3tadata_f0und!_c999e2a4}`
+## Flag : `picoCTF{puzzl3d_m3tadata_f0und!_c999e2a4}`
 
 
-# Tools used
+## Tools used
 1. `exiftool` -  used to give metadata of the file.
 2. `base64` - used to decode the base64 values.

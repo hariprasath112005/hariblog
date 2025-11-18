@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>General-Skills - Tag - Hari&#39;s Blog</title>
+        <link>https://hariprasath112005.github.io/hariblog/tags/general-skills/</link>
+        <description>General-Skills - Tag - Hari&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>hariprasathcce@gmail.com (Hariprasath)</managingEditor>
+            <webMaster>hariprasathcce@gmail.com (Hariprasath)</webMaster><lastBuildDate>Tue, 18 Nov 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://hariprasath112005.github.io/hariblog/tags/general-skills/" rel="self" type="application/rss+xml" /><item>
+    <title>Log Hunt - PicoCtf</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/</link>
+    <pubDate>Tue, 18 Nov 2025 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/</guid>
+    <description><![CDATA[Challenge Name - Log Hunt- picoMini by CMU-Africa Category: General Difficulty: Easy
+Description Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag?Download the logs and figure out the full flag from the fragments.
+Hints You can use grep to filter only matching lines from the log. Some lines are duplicates; ignore extra occurrences.]]></description>
+</item>
+</channel>
+</rss>

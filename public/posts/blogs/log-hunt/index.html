@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Log Hunt - PicoCtf - Hari&#39;s Blog</title><meta name="Description" content=" "><meta property="og:url" content="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/">
+  <meta property="og:site_name" content="Hari&#39;s Blog">
+  <meta property="og:title" content="Log Hunt - PicoCtf">
+  <meta property="og:description" content="Challenge Name - Log Hunt- picoMini by CMU-Africa Category: General Difficulty: Easy
+Description Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag?Download the logs and figure out the full flag from the fragments.
+Hints You can use grep to filter only matching lines from the log. Some lines are duplicates; ignore extra occurrences.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-18T00:00:00+00:00">
+    <meta property="article:tag" content="PicoCtf">
+    <meta property="article:tag" content="Easy">
+    <meta property="article:tag" content="General-Skills">
+    <meta property="article:tag" content="PicoMini-by-CMU-Africa">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Log Hunt - PicoCtf">
+  <meta name="twitter:description" content="Challenge Name - Log Hunt- picoMini by CMU-Africa Category: General Difficulty: Easy
+Description Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag?Download the logs and figure out the full flag from the fragments.
+Hints You can use grep to filter only matching lines from the log. Some lines are duplicates; ignore extra occurrences.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" /><link rel="prev" href="https://hariprasath112005.github.io/hariblog/posts/blogs/riddle-registry/" /><link rel="next" href="https://hariprasath112005.github.io/hariblog/posts/blogs/hidden-in-plainsight/" /><link rel="stylesheet" href="/hariblog/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Log Hunt - PicoCtf",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/log-hunt\/"
+        },"genre": "posts","keywords": "PicoCtf, Easy, General-Skills, picoMini-by-CMU-Africa","wordcount":  151 ,
+        "url": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/log-hunt\/","datePublished": "2025-11-18T00:00:00+00:00","dateModified": "2025-11-18T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Hariprasath"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Log Hunt - PicoCtf</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-11-18">2025-11-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;151 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a>
+      <ul>
+        <li><a href="#hints">Hints</a></li>
+      </ul>
+    </li>
+    <li><a href="#solution">Solution</a></li>
+    <li><a href="#flag-picoctfus3_y0urlinux_sk1lls_cedfa5fb">Flag: picoCTF{us3_y0urlinux_sk1lls_cedfa5fb}</a></li>
+    <li><a href="#tools-used">Tools used</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="challenge-name---log-hunt--picomini-by-cmu-africa">Challenge Name - Log Hunt- picoMini by CMU-Africa</h1>
+<p><strong>Category:</strong> General
+<strong>Difficulty</strong>: Easy</p>
+<h2 id="description">Description</h2>
+<blockquote>
+<p>Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag?Download the <a href="https://challenge-files.picoctf.net/c_amiable_citadel/49cec6157142f24a599f4164d5b63322c2494f801390d6f22eb91b3aa592bc66/server.log" target="_blank" rel="noopener noreffer ">logs</a> and figure out the full flag from the fragments.</p>
+</blockquote>
+<h3 id="hints">Hints</h3>
+<blockquote>
+<p>You can use <code>grep</code> to filter only matching lines from the log.
+Some lines are duplicates; ignore extra occurrences.</p>
+</blockquote>
+<h2 id="solution">Solution</h2>
+<ol>
+<li>As the Hint says to use <code>grep</code> and filter the matching lines.</li>
+<li>So, I views the file. Output is very long.</li>
+</ol>
+<p>![[Pasted image 20251118121114.png]]</p>
+<ol>
+<li>You can see the flag which has <code>INFO FLAGPART:</code></li>
+<li>We need to filter the results with <code>grep</code> tool and only filter the lines which has <code>INFO FLAGPART</code> in it.</li>
+<li>`cat server.log | grep &lsquo;INFO FLAGPART:&rsquo;</li>
+</ol>
+<p>![[Pasted image 20251118121540.png]]</p>
+<ol start="6">
+<li>The flag is repeated, but we can easily copy the flag.</li>
+</ol>
+<h2 id="flag-picoctfus3_y0urlinux_sk1lls_cedfa5fb">Flag: picoCTF{us3_y0urlinux_sk1lls_cedfa5fb}</h2>
+<h2 id="tools-used">Tools used</h2>
+<ul>
+<li>grep</li>
+<li>cat</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-11-18</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" data-title="Log Hunt - PicoCtf" data-hashtags="PicoCtf,Easy,General-Skills,picoMini-by-CMU-Africa"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" data-title="Log Hunt - PicoCtf"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" data-hashtag="PicoCtf"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" data-title="Log Hunt - PicoCtf"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" data-title="Log Hunt - PicoCtf"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" data-title="Log Hunt - PicoCtf"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/log-hunt/" data-title="Log Hunt - PicoCtf" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fhariprasath112005.github.io%2fhariblog%2fposts%2fblogs%2flog-hunt%2f&amp;text=Log%20Hunt%20-%20PicoCtf" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/hariblog/tags/picoctf/">PicoCtf</a>,&nbsp;<a href="/hariblog/tags/easy/">Easy</a>,&nbsp;<a href="/hariblog/tags/general-skills/">General-Skills</a>,&nbsp;<a href="/hariblog/tags/picomini-by-cmu-africa/">PicoMini-by-CMU-Africa</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/hariblog/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hariblog/posts/blogs/riddle-registry/" class="prev" rel="prev" title="Riddle Registry - picoCtf"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Riddle Registry - picoCtf</a>
+            <a href="/hariblog/posts/blogs/hidden-in-plainsight/" class="next" rel="next" title="Hidden in plainsight - picoCtf">Hidden in plainsight - picoCtf<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.131.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/hariblog/js/theme.min.js"></script></body>
+</html>
