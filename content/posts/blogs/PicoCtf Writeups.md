@@ -26,7 +26,7 @@ The pdf file provided:
 # Solution: 
 
 1. The pdf content is not needed for this ctf, it is only a decoy.
-2. First I used `exiftool` to analyse the pdf and noticed this output
+2. First I used `exiftool` to analyse the pdf and noticed this output.
 
 
 ```
