@@ -19,7 +19,7 @@ tags:
 
 
 The pdf file provided: 
-!![Image Description](./images/Pasted%20image%2020251118094747.png)
+![[Pasted image 20251118094747.png]]
 
 
 
