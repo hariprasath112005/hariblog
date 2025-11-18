@@ -19,9 +19,12 @@ tags:
 
 
 The pdf file provided: 
+
+
+
 !![Image Description](/hariblog/images/Pasted%20image%2020251118094747.png)
 
-
+![[pic.jpg]]
 
 # Solution: 
 
