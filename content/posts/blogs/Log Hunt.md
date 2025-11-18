@@ -29,13 +29,13 @@ tags:
 2. So, I views the file. Output is very long.
 
 
-![[Pasted image 20251118121114.png]]
+!![Image Description](/hariblog/images/Pasted%20image%2020251118121114.png)
 1. You can see the flag which has `INFO FLAGPART:` 
 2. We need to filter the results with `grep` tool and only filter the lines which has `INFO FLAGPART` in it.
 3. `cat server.log | grep 'INFO FLAGPART:'
 
 
-![[Pasted image 20251118121540.png]]
+!![Image Description](/hariblog/images/Pasted%20image%2020251118121540.png)
 
 
 6. The flag is repeated, but we can easily copy the flag.

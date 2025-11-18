@@ -34,13 +34,13 @@ cat logs.txt | base64 -d >> temp.jpg
 4. the `cat` gives the content in the file and it is piped to base64 tool and the `>>` symbol will save the resulting value to a jpg image.
 
 
-![[sad.jpg]]
+!![Image Description](/hariblog/images/sad.jpg)
 This is the resultant image.
 5. now we can see some text in the image and I copied it.
 6. I used this [site](https://gchq.github.io/CyberChef/) to decode the text. I used all the operations until i get the flag.
 
 
-![[Pasted image 20251118130712.png]]
+!![Image Description](/hariblog/images/Pasted%20image%2020251118130712.png)
 
 7. As you can see the output is the flag.
 
