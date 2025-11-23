@@ -4,7 +4,25 @@
         <link>https://hariprasath112005.github.io/hariblog/posts/</link>
         <description>All Posts | Hari&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>hariprasathcce@gmail.com (Hariprasath)</managingEditor>
-            <webMaster>hariprasathcce@gmail.com (Hariprasath)</webMaster><lastBuildDate>Tue, 18 Nov 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://hariprasath112005.github.io/hariblog/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hariprasathcce@gmail.com (Hariprasath)</webMaster><lastBuildDate>Wed, 19 Nov 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://hariprasath112005.github.io/hariblog/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Corrupted File - picoCtf</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/corrupted-file/</link>
+    <pubDate>Wed, 19 Nov 2025 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/corrupted-file/</guid>
+    <description><![CDATA[Challenge Name - Corrupted File - picoCtf Category: Forensics Difficulty: Easy
+Description Hints Step-by-Step Solution Flag Tools Used ]]></description>
+</item>
+<item>
+    <title>Crack the Gate 1 - picoCtf</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/crack-the-gate-1/</link>
+    <pubDate>Wed, 19 Nov 2025 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/crack-the-gate-1/</guid>
+    <description><![CDATA[Challenge Name - Crack the Gate 1 - picoCtf Category Web Exploitation Difficulty: Easy
+Description We’re in the middle of an investigation. One of our persons of interest, ctf player, is believed to be hiding sensitive data inside a restricted web portal. We’ve uncovered the email address he uses to log in: ctf-player@picoctf.org. Unfortunately, we don’t know the password, and the usual guessing techniques haven’t worked. But something feels off&hellip; it’s almost like the developer left a secret way in.]]></description>
+</item>
+<item>
     <title>Flag in Flame - picoCtf </title>
     <link>https://hariprasath112005.github.io/hariblog/posts/blogs/flag-in-flame/</link>
     <pubDate>Tue, 18 Nov 2025 00:00:00 &#43;0000</pubDate>
