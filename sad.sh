@@ -86,10 +86,18 @@ else
 fi
 
 # Step 7: Push all changes to the main branch
-echo "Deploying to GitHub Main..."
-if ! git push origin main; then
-    echo "Failed to push to main branch."
-    exit 1
+#echo "Deploying to GitHub Main..."
+#if ! git push origin main; then
+#    echo "Failed to push to main branch."
+#    exit 1
+#fi
+
+# Step 7: Push only if there were commits
+if [ "$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)" -gt 0 ]; then
+    echo "Deploying to GitHub Main..."
+    git push origin main
+else
+    echo "No new commits to push."
 fi
 
 # Step 8: Deploy /public to gh-pages
