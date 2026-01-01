@@ -4,7 +4,51 @@
         <link>https://hariprasath112005.github.io/hariblog/tags/programming/</link>
         <description>Programming - Tag - Hari&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>hariprasathcce@gmail.com (Hariprasath)</managingEditor>
-            <webMaster>hariprasathcce@gmail.com (Hariprasath)</webMaster><lastBuildDate>Sun, 21 Dec 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://hariprasath112005.github.io/hariblog/tags/programming/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hariprasathcce@gmail.com (Hariprasath)</webMaster><lastBuildDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://hariprasath112005.github.io/hariblog/tags/programming/" rel="self" type="application/rss+xml" /><item>
+    <title>Array Problems</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/</link>
+    <pubDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/</guid>
+    <description><![CDATA[Element with Left side smaller than Right side greater Input : [4, 2, 5, 7] output : 5
+Create two array, leftMax and rightMin Assing rightMin[n - 1] to max value (Integer.MAX_VALUE In a for loop from i = 1, assign the leftMax[i] = Math.max(leftMax[i - 1], arr[i - 1]) In a for loop from i = n - 2, assign the RightMin[i] = Math.min(rightMin[i + 1], arr[i + 1]) then return the element that is arr[i] &gt; leftMax[i] &amp;&amp; arr[i] &lt; rightMin[i] Sorting Elements of an Array by Frequency Explanation: Given an array A[] of integers, sort the array according to frequency of elements.]]></description>
+</item>
+<item>
+    <title>Data structures</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/</link>
+    <pubDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/</guid>
+    <description><![CDATA[Time Complexity Big O Notation Big O notation is special notation that tells you how fast an algorithm is. Big O notation is about the worst-case scenario. It’s a reassurance—you know that simple search will never be slower than O(n) time. Algorithm running times grow at diﬀerent rates This tells you the number of operations an algorithm will make. It’s called Big O Notation because you put a “big O” in front of the number of operations O(log n), also known as log time.]]></description>
+</item>
+<item>
+    <title>Hard Problems</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/</link>
+    <pubDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/</guid>
+    <description><![CDATA[Travel Salesman Problem (TSP) Explanation: Given a 2d matrix cost[][] of size n where cost[i][j] denotes the cost of moving from city i to city j. The task is to complete a tour from city 0 (0-based index) to all other cities such that we visit each city exactly once and then at the end come back to city 0 at minimum cost. Find the minimum possible cost to visit every city exactly once and return to the starting city.]]></description>
+</item>
+<item>
+    <title>Important Stuffs</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/important-stuffs/</link>
+    <pubDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/important-stuffs/</guid>
+    <description><![CDATA[convert binary to Integer Explanation: Multiply the digit from last to the 2^i++ and append the value to a variable. create 2 variable base = 1 and dec = 0. while(N &gt; 0){ int temp = N % 10; N = N / 10; dec += temp * base; base = base * 2; } Integer to Binary String binary = &#34;&#34;; if (n == 0) { binary = &#34;0&#34;; } else { while (n &gt; 0) { int rem = n % 2; binary = rem + binary; // prepend remainder n = n / 2; } } find gcd LCM = a * b / GCD(a, b) if b is 0 then gcd is a static int findGCD(int a, int b) { if (b == 0) return a; // Base case return findGCD(b, a % b); // Recursive step } Find Prime the number should be divided by 1 and itself static boolean isPrime(int n) { if (n &lt;= 1) return false; // 0 and 1 are not prime if (n == 2) return true; // 2 is prime if (n % 2 == 0) return false; // even numbers &gt; 2 are not prime // Check divisibility up to √n for (int i = 3; i * i &lt;= n; i += 2) { if (n % i == 0) return false; } return true; } Leap Year The leap year should be divisible by 4 and 400 should not be divisible by 100 n % 100 !]]></description>
+</item>
+<item>
+    <title>String Problems</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/string-problems/</link>
+    <pubDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/string-problems/</guid>
+    <description><![CDATA[Longest Palindromic SubString Explanation: Given a string s, find the longest substring which is a palindrome. If there are multiple answers, then find the first appearing substring.
+Input : s = &quot;forgeeksskeegfor&quot; Output: &quot;geeksskeeg&quot;
+Create a function to check whether the given substring is palindrome or not. (args: String s, int low, int high)
+Main function : Get the length of the given string. create two variables : maxLen = 1 and start = 0;]]></description>
+</item>
+<item>
     <title>PLACEMENT ROADMAP</title>
     <link>https://hariprasath112005.github.io/hariblog/posts/blogs/placement-roadmap/</link>
     <pubDate>Sun, 21 Dec 2025 00:00:00 &#43;0000</pubDate>

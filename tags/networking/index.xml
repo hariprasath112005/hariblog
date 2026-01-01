@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Networking - Tag - Hari&#39;s Blog</title>
+        <link>https://hariprasath112005.github.io/hariblog/tags/networking/</link>
+        <description>Networking - Tag - Hari&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>hariprasathcce@gmail.com (Hariprasath)</managingEditor>
+            <webMaster>hariprasathcce@gmail.com (Hariprasath)</webMaster><lastBuildDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://hariprasath112005.github.io/hariblog/tags/networking/" rel="self" type="application/rss+xml" /><item>
+    <title>Networking</title>
+    <link>https://hariprasath112005.github.io/hariblog/posts/blogs/networking/</link>
+    <pubDate>Thu, 01 Jan 2026 00:00:00 &#43;0000</pubDate>
+    <author>hariprasathcce@gmail.com (Hariprasath)</author>
+    <guid>https://hariprasath112005.github.io/hariblog/posts/blogs/networking/</guid>
+    <description><![CDATA[Protocol and its Port Protocol Port HTTP 80 HTTPS 443 FTP 21 SSH / SFTP 22 Telnet 23 SMTP 25 DNS 53 DHCP 67 / 68 POP3 110 IMAP 143 SMTP (Simple Mail Transfer Protocol) is used for sending emails. POP3 is used to receive emails by downloading them from the server. IMAP allows accessing emails directly on the mail server. Class Range (1st Octet) Network / Host Bits Use Class A 1 – 126 8 / 24 Very large networks Class B 128 – 191 16 / 16 Medium networks Class C 192 – 223 24 / 8 Small networks Class D 224 – 239 — Multicasting Class E 240 – 255 — Research Subnetting is the process of:]]></description>
+</item>
+</channel>
+</rss>
