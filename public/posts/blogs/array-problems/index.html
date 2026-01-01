@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - Hari&#39;s Blog</title><meta name="Description" content=" "><meta property="og:url" content="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/">
+  <meta property="og:site_name" content="Hari&#39;s Blog">
+  <meta property="og:title" content="Hari&#39;s Blog">
+  <meta property="og:description" content="Element with Left side smaller than Right side greater Input : [4, 2, 5, 7] output : 5
+Create two array, leftMax and rightMin Assing rightMin[n - 1] to max value (Integer.MAX_VALUE In a for loop from i = 1, assign the leftMax[i] = Math.max(leftMax[i - 1], arr[i - 1]) In a for loop from i = n - 2, assign the RightMin[i] = Math.min(rightMin[i &#43; 1], arr[i &#43; 1]) then return the element that is arr[i] &gt; leftMax[i] &amp;&amp; arr[i] &lt; rightMin[i] Sorting Elements of an Array by Frequency Explanation: Given an array A[] of integers, sort the array according to frequency of elements.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hari&#39;s Blog">
+  <meta name="twitter:description" content="Element with Left side smaller than Right side greater Input : [4, 2, 5, 7] output : 5
+Create two array, leftMax and rightMin Assing rightMin[n - 1] to max value (Integer.MAX_VALUE In a for loop from i = 1, assign the leftMax[i] = Math.max(leftMax[i - 1], arr[i - 1]) In a for loop from i = n - 2, assign the RightMin[i] = Math.min(rightMin[i &#43; 1], arr[i &#43; 1]) then return the element that is arr[i] &gt; leftMax[i] &amp;&amp; arr[i] &lt; rightMin[i] Sorting Elements of an Array by Frequency Explanation: Given an array A[] of integers, sort the array according to frequency of elements.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" /><link rel="prev" href="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" /><link rel="next" href="https://hariprasath112005.github.io/hariblog/posts/blogs/riddle-registry/" /><link rel="stylesheet" href="/hariblog/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/array-problems\/"
+        },"genre": "posts","wordcount":  1683 ,
+        "url": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/array-problems\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Hariprasath"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1683 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#explanation-given-an-arrayaof-integerssortthe-array-according-tofrequencyof-elements-that-is-elements-that-have-higher-frequency-come-first-if-frequencies-of-two-elements-are-same-then-smaller-number-comes-first">Explanation: Given an array <strong>A[]</strong> of integers, <strong>sort</strong> the array according to <strong>frequency</strong> of elements. That is elements that have higher frequency come first. If frequencies of two elements are same, then smaller number comes first.</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-need-to-return-the-two-elements-which-are-repeated">Explanation: Need to return the two elements which are repeated.</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-return-true-if-the-range-from-a-to-b-are-present-in-the-array">Explanation: Return true if the range from A to B are present in the array</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-2--min--max-----remove-the-elements-so-that-it-is-satisfied">Explanation: 2 * min &gt;= max  &ndash;&gt; Remove the elements so that it is satisfied</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-add-first-2-elements-and-erase-them--the-added-elements-should-be--k-count-the-number-of-operations-required">Explanation: Add first 2 elements and erase them , the added elements should be &gt;= K. count the number of operations required.</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-return-true-if-the-b-array-is-subset-of-a">Explanation: Return true if the B array is subset of A.</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-given-two-sorted-arraysarr1andarr2-each-of-sizen-the-task-is-to-merge-the-arrays-and-find-the-sum-of-the-two-middle-elements-of-the-merged-array">Explanation: Given two sorted arrays, <strong><strong>arr1[]</strong></strong> and <strong><strong>arr2[]</strong></strong>, each of size <strong><strong>N</strong></strong>, the task is to merge the arrays and find the sum of the two middle elements of the merged array.</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-convert-the-given-string-to-camel-case">Explanation: Convert the given String to Camel Case.</a></li>
+    <li><a href="#heading">`</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#explanation-given-two-non-empty-stringss1ands2of-lowercase-letters-determine-if-they-are-anagrams--ie-if-they-contain-the-same-characters-with-the-same-frequencies">Explanation: Given two non-empty strings <strong><strong>s1</strong></strong> and <strong><strong>s2</strong></strong> of lowercase letters, determine if they are anagrams — i.e., if they contain the same characters with the same frequencies.</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="element-with-left-side-smaller-than-right-side-greater">Element with Left side smaller than Right side greater</h1>
+<p><code>Input : [4, 2, 5, 7]</code>
+<code>output : 5</code></p>
+<ol>
+<li>Create two array, leftMax and rightMin</li>
+<li>Assing rightMin[n - 1]  to max value (Integer.MAX_VALUE</li>
+<li>In a for loop from i = 1, assign the leftMax[i] = Math.max(leftMax[i - 1], arr[i - 1])</li>
+<li>In a for loop from i = n - 2, assign the RightMin[i] = Math.min(rightMin[i + 1], arr[i + 1])</li>
+<li>then return the element that is arr[i] &gt; leftMax[i] &amp;&amp; arr[i] &lt; rightMin[i]</li>
+</ol>
+<hr>
+<h1 id="sorting-elements-of-an-array-by-frequency">Sorting Elements of an Array by Frequency</h1>
+<h3 id="explanation-given-an-arrayaof-integerssortthe-array-according-tofrequencyof-elements-that-is-elements-that-have-higher-frequency-come-first-if-frequencies-of-two-elements-are-same-then-smaller-number-comes-first">Explanation: Given an array <strong>A[]</strong> of integers, <strong>sort</strong> the array according to <strong>frequency</strong> of elements. That is elements that have higher frequency come first. If frequencies of two elements are same, then smaller number comes first.</h3>
+<p>Input: arr = [2, 5, 2, 8, 5, 6, 8, 8]
+Output: 8 8 8 2 2 5 5 6</p>
+<ol>
+<li>
+<p>Create a Frequency Map:</p>
+<ul>
+<li>Create a HashMap to store each number from the array as a key and its frequency (count) as the value.</li>
+<li>Iterate through the input array arr. For each number, update its count in the HashMap.</li>
+<li>Example Map: {2=2, 5=2, 6=1, 8=3}</li>
+</ul>
+</li>
+<li>
+<p>Implement Custom Sorting:</p>
+<ul>
+<li>Use Collections.sort() on the original array arr.</li>
+<li>Provide a custom comparator to define the sorting rules.</li>
+</ul>
+</li>
+<li>
+<p>Primary Sort Rule (by Frequency):</p>
+<ul>
+<li>Inside the comparator, for two numbers a and b, get their frequencies from the HashMap.</li>
+<li>If the frequencies are different, sort in descending order of frequency. The comparison will be frequency of b - frequency of a.</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>	Collections.sort(arr, (a, b)-&gt; {
+	    int freqA = map.get(a);
+	    int freqB = map.get(b);
+
+	    if(freqA != freqB){
+	        return freqB - freqA;
+	    }
+	    else{
+	        return a- b;
+	    }
+	});</code></pre></div>
+</li>
+<li>
+<p>Secondary Sort Rule (by Value):</p>
+<ul>
+<li>If the frequencies are the same, sort the numbers in ascending order of their value. The comparison will be a - b.</li>
+</ul>
+</li>
+<li>
+<p>Print the Sorted Array:</p>
+<ul>
+<li>Iterate through the now-sorted array and print each element.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="counting-elements-in-two-arrays">Counting Elements in two arrays</h1>
+<p><code>Input: A: [4, 8, 7, 5, 1] B: [4, 48, 3, 0, 1, 1, 15</code>
+<code>Output: [5, 6, 6, 6, 3]</code></p>
+<p>Explanation: A[0] = 4, which is 5 elements lesser than 4 in the B array. return those count for each element in A.</p>
+<ol>
+<li>
+<p>Create a list and sort the B list</p>
+</li>
+<li>
+<p>Create a function that does Binary Search with the B array and one element from A.
+```
+if(arr[mid] &lt;= key){
+low = mid + 1;
+}
+else{
+high = mid;
+}
+return low;</p>
+<pre><code> ```
+</code></pre>
+</li>
+<li>
+<p>It counts the elements which are lesser than the key.</p>
+</li>
+<li>
+<p>Add the count to the list.</p>
+</li>
+</ol>
+<hr>
+<h1 id="two-repeated-elements">Two Repeated Elements</h1>
+<p><code>INput: [1, 2, 1, 3, 4, 3]</code>
+<code>Output: [1, 3]</code></p>
+<h2 id="explanation-need-to-return-the-two-elements-which-are-repeated">Explanation: Need to return the two elements which are repeated.</h2>
+<ol>
+<li>Create a set and a variable &lsquo;Index&rsquo;</li>
+<li>Loop the elements of the arr and check that element is present in the set.</li>
+<li>if not present, add the element in the set.</li>
+<li>If present, add the element to the list and increment the index.</li>
+<li>When the index is 2, break.</li>
+</ol>
+<hr>
+<h1 id="elements-in-range">Elements in Range</h1>
+<p><code>INput: A = 2, B = 5, arr = [1, 4, 6, 2, 7, 8, 3]</code>
+<code>Output: True or False</code></p>
+<h2 id="explanation-return-true-if-the-range-from-a-to-b-are-present-in-the-array">Explanation: Return true if the range from A to B are present in the array</h2>
+<ol>
+<li>Sort the Array. (Arrays.sort(arr))</li>
+<li>Create a Set and add the elements</li>
+<li>in loop check from A to B for elements</li>
+</ol>
+<hr>
+<h1 id="remove-minimal-elements">Remove Minimal Elements</h1>
+<p><code>Input: arr = [4, 5, 100, 9, 10, 11, 12, 15, 200]</code></p>
+<h2 id="explanation-2--min--max-----remove-the-elements-so-that-it-is-satisfied">Explanation: 2 * min &gt;= max  &ndash;&gt; Remove the elements so that it is satisfied</h2>
+<ol>
+<li>sort the array</li>
+<li>STart = 0, maxLen = 0</li>
+<li>create a for loop (int end = 0)</li>
+<li>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>while(start &lt; end) &amp;&amp; 2 * arr[start] &lt; arr[end]{
+    start++;
+ }
+ maxLen = Math.max(maxLen, end - start+ 1);
+ 	}
+ }</code></pre></div>
+<ol start="5">
+<li>return the n -  maxLen so that it gives count of elements to remove.</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="adding-array-elements">Adding Array Elements</h1>
+<p><code>Input: N = 6, K = 6, arr = [1, 10, 12, 9, 2, 3]</code></p>
+<h2 id="explanation-add-first-2-elements-and-erase-them--the-added-elements-should-be--k-count-the-number-of-operations-required">Explanation: Add first 2 elements and erase them , the added elements should be &gt;= K. count the number of operations required.</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>class Solution {
+    int minOperations(int[] arr, int n, int k) {
+        // code here
+       
+       PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;();
+       int count = 0;
+       for(int i: arr){
+           pq.add(i);
+       }
+       
+       while(!pq.isEmpty()){
+          
+
+           if(pq.peek() &gt;= k)
+           {
+               return count;
+           }
+             int first = 0, sec = 0;
+           
+           if(pq.size() == 1){
+               if(pq.peek() &lt; k) return -1;
+               else{
+               return count;
+                   
+               }
+           }
+           
+           
+           
+           first = pq.peek();
+           pq.poll();
+           sec = pq.peek();
+           pq.poll();
+           
+           pq.add(first + sec);
+           count++;
+       }
+       return count;
+    }
+}</code></pre></div>
+<hr>
+<h1 id="array-subset">Array Subset</h1>
+<p>`input: A[] = [11, 7, 1, 13, 21, 3, 7, 3] , B[] = [11, 3, 7, 1, 1]</p>
+<h2 id="explanation-return-true-if-the-b-array-is-subset-of-a">Explanation: Return true if the B array is subset of A.</h2>
+<ol>
+<li>create a Hashmap for B array and get the count</li>
+<li>traverse the A array and remove the value of key, if it is present in the map.
+<code>map1.put(i, map1.get(i) - 1))</code></li>
+<li>Traverse the map.values() and check if the values is &gt; 0.</li>
+<li>If true then return false or else true.</li>
+</ol>
+<hr>
+<h1 id="rearrange-the-array-in-a-way-that-max-element-comes-first-and-min-element-comes-second">Rearrange the array in a way that max element comes first and min element comes second</h1>
+<p><code>Input: [1, 2, 3, 4, 5]</code>
+<code>Output: [5, 1, 4, 2, 3]</code></p>
+<ol>
+<li>Traverse a Array</li>
+<li>Create a two pointer</li>
+<li>if flag is True, Insert the last element to the new array.</li>
+<li>Then put `flag = !flag.</li>
+<li>Add the first element to the array.</li>
+</ol>
+<hr>
+<h1 id="swap-a-element-in-list">Swap a element in list</h1>
+<p>-&gt; list.set(value, arr.get(i));</p>
+<hr>
+<h1 id="sum-of-middle-elements-of-two-sorted-arrays">Sum of middle elements of two sorted Arrays</h1>
+<h2 id="explanation-given-two-sorted-arraysarr1andarr2-each-of-sizen-the-task-is-to-merge-the-arrays-and-find-the-sum-of-the-two-middle-elements-of-the-merged-array">Explanation: Given two sorted arrays, <strong><strong>arr1[]</strong></strong> and <strong><strong>arr2[]</strong></strong>, each of size <strong><strong>N</strong></strong>, the task is to merge the arrays and find the sum of the two middle elements of the merged array.</h2>
+<p><code>Input:N = 5, arr1[] = {1,2,4,6,10}, arr2[] = {4,5,6,9,12}</code>
+<code>Output: 11</code></p>
+<ol>
+<li>Create a merged array of size 2*n</li>
+<li>Traverse both arrays and merge them into the  merged array]</li>
+<li><code> while (i &lt; n &amp;&amp; j &lt; n) { if (arr1[i] &lt;= arr2[j]) { merged[k++] = arr1[i++]; } else { merged[k++] = arr2[j++]; } }</code></li>
+<li>Then copy the remaining elements in arr1 to the merged array</li>
+<li><code> while (i &lt; n) { merged[k++] = arr1[i++]; }</code></li>
+<li>and also copy the elements in arr2 to merged array.</li>
+<li>`   while (j &lt; n) {
+merged[k++] = arr2[j++];
+}</li>
+<li>Return the sum of the middle two elements.</li>
+</ol>
+<hr>
+<h1 id="remove-character">Remove character</h1>
+<h1 id="explanation-given-two-strings-str1-and-str2-remove-those-characters-from-the-first-stringstr1-which-are-present-in-the-second-stringstr2-both-the-strings-are-different-and-contain-only-lowercase-characters">Explanation: Given two strings str1 and str2, remove those characters from the first string(str1) which are present in the second string(str2). Both the strings are different and contain only lowercase characters.</h1>
+<p><code>Input: str1 = &quot;computer&quot;, str2= &quot;cat&quot; </code>Output: &ldquo;ompuer&rdquo;`</p>
+<ol>
+<li>Create a set and append the str1 into it.</li>
+<li>then traverse the str2 and check if the str2 is present in the str1, if not present, add it to the stringBuilder.</li>
+</ol>
+<hr>
+<h1 id="convert-a-string-to-camel-case">Convert a String to Camel Case</h1>
+<h2 id="explanation-convert-the-given-string-to-camel-case">Explanation: Convert the given String to Camel Case.</h2>
+<p><code>input</code>: S = &lsquo;i love programming&rsquo;
+<code>output: 'I Love Programming'</code></p>
+<ol>
+<li>create a StringBuilder and append the first character which is converted to uppercase (Character.toUpperCase());</li>
+<li>then traverse through the string by using split().</li>
+<li>get the character in a variable and check for the previous values (i - 1) is space or not.</li>
+<li>if True; append the value which should be converted to upper.</li>
+<li>else; append the character to the stringbuilder</li>
+</ol>
+<h2 id="heading">`</h2>
+<h1 id="count-the-substring">Count the Substring</h1>
+<h1 id="explanation-return-the-number-of-substring-possible-in-string">Explanation: Return the number of subString possible in String.</h1>
+<p><code>INput: '10101'</code>
+<code>Output: 3</code></p>
+<ol>
+<li>get the count of &lsquo;1&rsquo;</li>
+<li>use formula n * (n - 1) / 2</li>
+</ol>
+<hr>
+<h1 id="reverse-the-string-without-reversing-the-individuals-words">Reverse the String without reversing the individuals words.</h1>
+<p><code>input: I.LOVE.YOU</code>
+<code>output: YOU.LOVE.I</code></p>
+<ol>
+<li>split the words and store it in array. <code>split(&quot;\\.&quot;)</code></li>
+<li>traverse the array in reverse</li>
+<li>if the stringbuilder length is &gt; 0 then append the dot (.)</li>
+<li>Because first character should not be dot</li>
+<li>else append the value to the stringbuilder</li>
+</ol>
+<hr>
+<h1 id="check-if-two-strings-are-anagrams-of-each-other">Check if two Strings are Anagrams of each other</h1>
+<h2 id="explanation-given-two-non-empty-stringss1ands2of-lowercase-letters-determine-if-they-are-anagrams--ie-if-they-contain-the-same-characters-with-the-same-frequencies">Explanation: Given two non-empty strings <strong><strong>s1</strong></strong> and <strong><strong>s2</strong></strong> of lowercase letters, determine if they are anagrams — i.e., if they contain the same characters with the same frequencies.</h2>
+<p><code>Input: s1 = “geeks”  s2 = “kseeg”   </code>Output: true<br>
+`Explanation: Both the string have same characters with same frequency. So, they are anagrams.</p>
+<ol>
+<li>if both the length of the string are not matching, then return false;</li>
+<li>store the two string in two separate array</li>
+<li>sort the arrays</li>
+<li>check if both the array are equal. Arrays.equals(arr1, arr2);</li>
+</ol>
+<hr>
+<h1 id="valid-substring">Valid Substring</h1>
+<h1 id="explanation--given-a-stringsconsisting-only-of-opening-and-closing-parenthesesand-find-the-length-of-thelongest-validwell-formed-parenthesessubstring">Explanation:  Given a string <strong><code>s</code></strong> consisting only of opening and closing parentheses <strong><code>'('</code></strong> and <code>')'</code>, find the length of the <strong>longest valid</strong> (well-formed) parentheses <strong>substring</strong>.</h1>
+<p><code>Input</code>:  s = &ldquo;(()(&rdquo;
+`Output: 2</p>
+<ol>
+<li>create a stack</li>
+<li>push(-1) to the stack</li>
+<li>get the character and check if its &lsquo;(&rsquo; then push the i value to the stack.</li>
+<li>if false, pop the stack and check if its empty. stack.isEmpty()</li>
+<li>if true, push(i) and if false, check for maxLength  = math.max(maxLength, i - stack.peek())</li>
+</ol>
+<hr>
+<h1 id="stock-buy-and-sell--max-one-transaction-allowed">Stock Buy and Sell – Max one Transaction Allowed</h1>
+<p>class Solution {
+public int maximumProfit(int prices[]) {
+// Code here
+int min = Integer.MAX_VALUE;
+int maxProfit = 0;
+for(int price : prices){
+min = Math.min(min,price);
+maxProfit = Math.max(maxProfit,price-min);
+}
+return maxProfit;</p>
+<pre><code>}
+</code></pre>
+<hr>
+<h1 id="maximum-subarray-sum---kadanes-algorithm">Maximum Subarray Sum - Kadane&rsquo;s Algorithm</h1>
+<pre><code>    static int maxSubarraySum(int[] arr) {
+    
+    // Stores the result (maximum sum found so far)
+    int res = arr[0];
+    
+    // Maximum sum of subarray ending at current position
+    int maxEnding = arr[0];
+
+    for (int i = 1; i &lt; arr.length; i++) {
+        
+        // Either extend the previous subarray or start 
+        // new from current element
+        maxEnding = Math.max(maxEnding + arr[i], arr[i]);
+      
+        // Update result if the new subarray sum is larger
+        res = Math.max(res, maxEnding);
+    }
+    return res;
+}
+</code></pre>
+<h1 id="nth-fibonacci-number">Nth Fibonacci Number</h1>
+<p>class GfG {</p>
+<pre><code>static int nthFibonacci(int n){
+
+    if (n &lt;= 1) {
+        return n;
+    }
+
+
+    return nthFibonacci(n - 1) + nthFibonacci(n - 2);
+}
+
+public static void main(String[] args){
+    int n = 5;
+    int result = nthFibonacci(n);
+    System.out.println(result);
+}
+</code></pre>
+<p>}</p>
+<h1 id="fibonacci-series">Fibonacci Series</h1>
+<p>class Solution {<br>
+    // Function to return list containing first n fibonacci numbers.<br>
+    public static int[] fibonacciNumbers(int n) {<br>
+        // Your code here<br>
+        int fqi[] = new int[n];<br>
+        int num1 = 0, num2 =1;<br>
+        int sum = 0;<br>
+        <br>
+        for(int i =0 ;i&lt; n;i++){<br>
+            fqi[i] = num1;<br>
+            sum = num1 +num2;<br>
+            num1 = num2;<br>
+            num2 = sum;<br>
+            <br>
+        }<br>
+        return fqi;<br>
+    }<br>
+}</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fhariprasath112005.github.io%2fhariblog%2fposts%2fblogs%2farray-problems%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/hariblog/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hariblog/posts/blogs/data-structures/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/hariblog/posts/blogs/riddle-registry/" class="next" rel="next" title="Riddle Registry - picoCtf">Riddle Registry - picoCtf<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.131.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/hariblog/js/theme.min.js"></script></body>
+</html>

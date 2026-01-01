@@ -79,6 +79,27 @@ Description: Hi, intrepid investigator! 📄🔍 You&rsquo;ve stumbled upon a pe
 The pdf file provided:</div><div class="post-footer">
         <a href="/hariblog/posts/blogs/riddle-registry/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/hariblog/tags/picoctf/">PicoCtf</a>,&nbsp;<a href="/hariblog/tags/easy/">Easy</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/hariblog/posts/blogs/array-problems/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">Element with Left side smaller than Right side greater Input : [4, 2, 5, 7] output : 5
+Create two array, leftMax and rightMin Assing rightMin[n - 1] to max value (Integer.MAX_VALUE In a for loop from i = 1, assign the leftMax[i] = Math.max(leftMax[i - 1], arr[i - 1]) In a for loop from i = n - 2, assign the RightMin[i] = Math.min(rightMin[i + 1], arr[i + 1]) then return the element that is arr[i] &gt; leftMax[i] &amp;&amp; arr[i] &lt; rightMin[i] Sorting Elements of an Array by Frequency Explanation: Given an array A[] of integers, sort the array according to frequency of elements.</div><div class="post-footer">
+        <a href="/hariblog/posts/blogs/array-problems/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/hariblog/posts/blogs/data-structures/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">Time Complexity Big O Notation Big O notation is special notation that tells you how fast an algorithm is. Big O notation is about the worst-case scenario. It’s a reassurance—you know that simple search will never be slower than O(n) time. Algorithm running times grow at diﬀerent rates This tells you the number of operations an algorithm will make. It’s called Big O Notation because you put a “big O” in front of the number of operations O(log n), also known as log time.</div><div class="post-footer">
+        <a href="/hariblog/posts/blogs/data-structures/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/hariblog/posts/blogs/hard-problems/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">Travel Salesman Problem (TSP) Explanation: Given a 2d matrix cost[][] of size n where cost[i][j] denotes the cost of moving from city i to city j. The task is to complete a tour from city 0 (0-based index) to all other cities such that we visit each city exactly once and then at the end come back to city 0 at minimum cost. Find the minimum possible cost to visit every city exactly once and return to the starting city.</div><div class="post-footer">
+        <a href="/hariblog/posts/blogs/hard-problems/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/hariblog/posts/blogs/important-stuffs/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">convert binary to Integer Explanation: Multiply the digit from last to the 2^i++ and append the value to a variable. create 2 variable base = 1 and dec = 0. while(N &gt; 0){ int temp = N % 10; N = N / 10; dec += temp * base; base = base * 2; } Integer to Binary String binary = &#34;&#34;; if (n == 0) { binary = &#34;0&#34;; } else { while (n &gt; 0) { int rem = n % 2; binary = rem + binary; // prepend remainder n = n / 2; } } find gcd LCM = a * b / GCD(a, b) if b is 0 then gcd is a static int findGCD(int a, int b) { if (b == 0) return a; // Base case return findGCD(b, a % b); // Recursive step } Find Prime the number should be divided by 1 and itself static boolean isPrime(int n) { if (n &lt;= 1) return false; // 0 and 1 are not prime if (n == 2) return true; // 2 is prime if (n % 2 == 0) return false; // even numbers &gt; 2 are not prime // Check divisibility up to √n for (int i = 3; i * i &lt;= n; i += 2) { if (n % i == 0) return false; } return true; } Leap Year The leap year should be divisible by 4 and 400 should not be divisible by 100 n % 100 !</div><div class="post-footer">
+        <a href="/hariblog/posts/blogs/important-stuffs/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/hariblog/posts/blogs/networking/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">Protocol and its Port Protocol Port HTTP 80 HTTPS 443 FTP 21 SSH / SFTP 22 Telnet 23 SMTP 25 DNS 53 DHCP 67 / 68 POP3 110 IMAP 143 SMTP (Simple Mail Transfer Protocol) is used for sending emails. POP3 is used to receive emails by downloading them from the server. IMAP allows accessing emails directly on the mail server. Class Range (1st Octet) Network / Host Bits Use Class A 1 – 126 8 / 24 Very large networks Class B 128 – 191 16 / 16 Medium networks Class C 192 – 223 24 / 8 Small networks Class D 224 – 239 — Multicasting Class E 240 – 255 — Research Subnetting is the process of:</div><div class="post-footer">
+        <a href="/hariblog/posts/blogs/networking/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/hariblog/">1</a>
@@ -87,10 +108,14 @@ The pdf file provided:</div><div class="post-footer">
                     <span class="page-link">
                         <a href="/hariblog/page/2/">2</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/hariblog/page/3/">3</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.131.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
         </div>
     </footer></div>
 

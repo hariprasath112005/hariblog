@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - Hari&#39;s Blog</title><meta name="Description" content=" "><meta property="og:url" content="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/">
+  <meta property="og:site_name" content="Hari&#39;s Blog">
+  <meta property="og:title" content="Hari&#39;s Blog">
+  <meta property="og:description" content="Time Complexity Big O Notation Big O notation is special notation that tells you how fast an algorithm is. Big O notation is about the worst-case scenario. It’s a reassurance—you know that simple search will never be slower than O(n) time. Algorithm running times grow at diﬀerent rates This tells you the number of operations an algorithm will make. It’s called Big O Notation because you put a “big O” in front of the number of operations O(log n), also known as log time.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hari&#39;s Blog">
+  <meta name="twitter:description" content="Time Complexity Big O Notation Big O notation is special notation that tells you how fast an algorithm is. Big O notation is about the worst-case scenario. It’s a reassurance—you know that simple search will never be slower than O(n) time. Algorithm running times grow at diﬀerent rates This tells you the number of operations an algorithm will make. It’s called Big O Notation because you put a “big O” in front of the number of operations O(log n), also known as log time.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" /><link rel="prev" href="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" /><link rel="next" href="https://hariprasath112005.github.io/hariblog/posts/blogs/array-problems/" /><link rel="stylesheet" href="/hariblog/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/data-structures\/"
+        },"genre": "posts","wordcount":  694 ,
+        "url": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/data-structures\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Hariprasath"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;694 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#big-o-notation">Big O Notation</a></li>
+    <li><a href="#arrays-and-linked-lists">ARRAYS AND LINKED LISTS</a>
+      <ul>
+        <li><a href="#linked-lists-solve-this-problem-of-adding-items">Linked lists solve this problem of adding items.</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#inorder-traversal">Inorder Traversal</a></li>
+    <li><a href="#preorder-traversal">Preorder Traversal</a></li>
+    <li><a href="#postorder-traversal">Postorder Traversal</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-non-preemptive-scheduling">1️⃣ Non-Preemptive Scheduling</a>
+      <ul>
+        <li><a href="#types-of-non-preemptive-algorithms">Types of Non-Preemptive Algorithms</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-preemptive-scheduling">2️⃣ Preemptive Scheduling</a>
+      <ul>
+        <li><a href="#types-of-preemptive-algorithms">Types of Preemptive Algorithms</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="time-complexity">Time Complexity</h1>
+<h2 id="big-o-notation">Big O Notation</h2>
+<ul>
+<li>Big O notation is special notation that tells you how fast an algorithm is.</li>
+<li>Big O notation is about the worst-case scenario. It’s a reassurance—you know that simple search will never be slower than O(n) time.</li>
+<li>Algorithm running times grow at diﬀerent rates</li>
+<li>This tells you the number of operations an algorithm will make. It’s called Big O Notation because you put a “big O” in front of the number of operations</li>
+</ul>
+<p><strong>O(log n), also known as log time. Example: Binary search .</strong>
+<strong>O(n), also known as linear time. Example: Simple search .</strong>
+<strong>O(n * log n). Example: A fast sorting algorithm , like</strong> <strong>quicksort</strong>
+<strong>2</strong>
+<strong>O(n ). Example: A slow sorting algorith m , like selection</strong>
+<strong>sor t.</strong>
+<strong>O(n!). Example: A really slow algorith m , like the</strong> **traveling salesperson **</p>
+<h2 id="arrays-and-linked-lists">ARRAYS AND LINKED LISTS</h2>
+<ul>
+<li>Using an array means all your tasks are stored contiguously (right next to each other) in memory.</li>
+<li>even if you have only 3 items in your task list, you can ask the computer for 10 slots, just in case. Then you can add 10 items to your task list without having to move. This is a good workaround.</li>
+<li>You may not need the extra slots that you asked for, and then that memory will be wasted. You aren’t using it, but no one else can use it either.</li>
+<li>You may add more than 10 items to your task list and have to move anyway.</li>
+<li>You know the address for every item in your array</li>
+<li>Arrays are great if you want to read random elements, because you can look up any element in your array instantly</li>
+</ul>
+<h3 id="linked-lists-solve-this-problem-of-adding-items">Linked lists solve this problem of adding items.</h3>
+<ul>
+<li>Each item stores the address of the next item in the list.</li>
+<li>It’s like a treasure hunt. Y ou go to the first address, and it says, “The next item can be found at address 123.” So you go to address 123, and it says, “The next item can be found at address 847,” and so on</li>
+<li>Linked lists are great if you’re going to read all the items one at a time: you can read one item, follow the address to the next item, and so on.</li>
+<li>But if you’re going to keep jumping around, linked lists are terrible.</li>
+<li>With a linked list, the elements aren’t next to each other, so you can’t instantly calculate the position of the fifth element in memory—you have to go to the first element to get the address to the second element, then go to the second element to get the address of the third element, and so on until you get to the fifth element.</li>
+</ul>
+<p>!<img
+        class="lazyload"
+        src="/hariblog/svg/loading.min.svg"
+        data-src="/hariblog/images/Pasted%20image%2020251231095817.png"
+        data-srcset="/hariblog/images/Pasted%20image%2020251231095817.png, /hariblog/images/Pasted%20image%2020251231095817.png 1.5x, /hariblog/images/Pasted%20image%2020251231095817.png 2x"
+        data-sizes="auto"
+        alt="/hariblog/images/Pasted%20image%2020251231095817.png"
+        title="Image Description" /></p>
+<h1 id="bfs-breadth-first-search">BFS (breadth first search)</h1>
+<ul>
+<li>Graph</li>
+<li>Uses Queue</li>
+</ul>
+<p><strong>BFS</strong> is a traversal algorithm where you: &gt; Visit <strong>all neighbors first</strong>, then move to the next level.</p>
+<p>It explores <strong>level by level</strong>.</p>
+<h1 id="dfs-depth-first-search">DFS (depth first search)</h1>
+<ul>
+<li>Graph</li>
+<li>trees</li>
+<li>Uses stack</li>
+</ul>
+<p><strong>DFS</strong> is a traversal algorithm where you: &gt; Go <strong>as deep as possible</strong> along one path before backtracking.</p>
+<pre><code>   1
+   / \
+  2   3
+ / \
+4   5
+</code></pre>
+<h2 id="inorder-traversal">Inorder Traversal</h2>
+<p>Left → Root → Right
+4 2 5 1 3</p>
+<h2 id="preorder-traversal">Preorder Traversal</h2>
+<p>Root → Left → Right
+Root → Left → Right</p>
+<h2 id="postorder-traversal">Postorder Traversal</h2>
+<p>Left → Right → Root
+1 2 4 5 3</p>
+<h1 id="scheduling-algorithms">Scheduling Algorithms</h1>
+<p><strong>CPU Scheduling</strong> is the method used by the <strong>operating system</strong> to decide:</p>
+<p><strong>Which process gets the CPU and for how long</strong>
+When multiple processes are in the <strong>ready state</strong>, the OS uses a <strong>scheduling algorithm</strong> to select one.</p>
+<h2 id="1-non-preemptive-scheduling">1️⃣ Non-Preemptive Scheduling</h2>
+<p>Once a process gets the CPU, <strong>it runs till completion</strong> or blocks itself.</p>
+<h3 id="types-of-non-preemptive-algorithms">Types of Non-Preemptive Algorithms</h3>
+<h4 id="1-first-come-first-serve-fcfs">1. First Come First Serve (FCFS)</h4>
+<ul>
+<li>Processes are executed <strong>in order of arrival</strong></li>
+</ul>
+<h4 id="2-shortest-job-first-sjf">2. Shortest Job First (SJF)</h4>
+<ul>
+<li>Process with <strong>smallest burst time</strong> executes first</li>
+</ul>
+<h4 id="3-longest-job-first">3. Longest Job First</h4>
+<h4 id="4--highest-response-ration-next">4.  Highest Response Ration next</h4>
+<h2 id="2-preemptive-scheduling">2️⃣ Preemptive Scheduling</h2>
+<p>CPU <strong>can be taken away</strong> from a running process.</p>
+<h3 id="types-of-preemptive-algorithms">Types of Preemptive Algorithms</h3>
+<h4 id="1-shortest-remaining-time-first-srtf">1. Shortest Remaining Time First (SRTF)</h4>
+<ul>
+<li>Preemptive version of SJF</li>
+</ul>
+<h4 id="2-priority-scheduling">2. Priority Scheduling</h4>
+<ul>
+<li>CPU allocated based on <strong>priority</strong></li>
+</ul>
+<h4 id="3round-robin-rr">3.Round Robin (RR)</h4>
+<p>Each process gets CPU for a <strong>fixed time quantum</strong></p>
+<h4 id="4-longest-remaining-time-first">4. Longest Remaining Time first</h4>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fhariprasath112005.github.io%2fhariblog%2fposts%2fblogs%2fdata-structures%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/hariblog/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hariblog/posts/blogs/hard-problems/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/hariblog/posts/blogs/array-problems/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.131.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/hariblog/js/theme.min.js"></script></body>
+</html>

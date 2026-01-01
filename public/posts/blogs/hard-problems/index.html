@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - Hari&#39;s Blog</title><meta name="Description" content=" "><meta property="og:url" content="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/">
+  <meta property="og:site_name" content="Hari&#39;s Blog">
+  <meta property="og:title" content="Hari&#39;s Blog">
+  <meta property="og:description" content="Travel Salesman Problem (TSP) Explanation: Given a 2d matrix cost[][] of size n where cost[i][j] denotes the cost of moving from city i to city j. The task is to complete a tour from city 0 (0-based index) to all other cities such that we visit each city exactly once and then at the end come back to city 0 at minimum cost. Find the minimum possible cost to visit every city exactly once and return to the starting city.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hari&#39;s Blog">
+  <meta name="twitter:description" content="Travel Salesman Problem (TSP) Explanation: Given a 2d matrix cost[][] of size n where cost[i][j] denotes the cost of moving from city i to city j. The task is to complete a tour from city 0 (0-based index) to all other cities such that we visit each city exactly once and then at the end come back to city 0 at minimum cost. Find the minimum possible cost to visit every city exactly once and return to the starting city.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" /><link rel="prev" href="https://hariprasath112005.github.io/hariblog/posts/blogs/important-stuffs/" /><link rel="next" href="https://hariprasath112005.github.io/hariblog/posts/blogs/data-structures/" /><link rel="stylesheet" href="/hariblog/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/hard-problems\/"
+        },"genre": "posts","wordcount":  571 ,
+        "url": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/hard-problems\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Hariprasath"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;571 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-concepts-used">📘 <strong>Concepts Used</strong></a>
+      <ul>
+        <li><a href="#1-bitmasking">1. <strong>Bitmasking</strong></a></li>
+        <li><a href="#2-recursion">2. <strong>Recursion</strong></a></li>
+        <li><a href="#3-base-case">3. <strong>Base Case</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="travel-salesman-problem-tsp">Travel Salesman Problem (TSP)</h1>
+<p>Explanation: Given a <strong><strong>2d matrix cost[][]</strong></strong> of <strong><strong>size n</strong></strong> where <strong><strong>cost[i][j]</strong></strong> denotes the cost of moving from <strong><strong>city i to city j.</strong></strong> The task is to complete a <strong><strong>tour</strong></strong> from <strong><strong>city 0 (0-based index)</strong></strong> to all other cities such that we visit each city <strong><strong>exactly once</strong></strong> and then at the end come back to <strong><strong>city 0</strong></strong> at minimum cost.
+Find the minimum possible cost to visit every city exactly once and return to the starting city.</p>
+<h2 id="-concepts-used">📘 <strong>Concepts Used</strong></h2>
+<h3 id="1-bitmasking">1. <strong>Bitmasking</strong></h3>
+<ul>
+<li>
+<p>Each city is represented by a bit in a binary number.</p>
+</li>
+<li>
+<p>If the bit is <code>1</code>, that city is visited.</p>
+</li>
+<li>
+<p>Example (for <code>n = 4</code> cities):</p>
+<ul>
+<li>
+<p><code>mask = 0001</code> → only city 0 visited</p>
+</li>
+<li>
+<p><code>mask = 1011</code> → cities 0, 1, 3 visited</p>
+</li>
+<li>
+<p><code>mask = 1111</code> → all 4 cities visited ✅</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-recursion">2. <strong>Recursion</strong></h3>
+<ul>
+<li><code>totalCost(mask, pos)</code> gives <strong>minimum cost</strong> to complete the tour starting from the current <code>pos</code>, given the visited cities (<code>mask</code>).</li>
+</ul>
+<h3 id="3-base-case">3. <strong>Base Case</strong></h3>
+<p>If all cities are visited (<code>mask == (1 &lt;&lt; n) - 1</code>),<br>
+→ Return cost to go back to the starting city (0).</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>Input: int[][] cost = {
+  { 0, 10, 15, 20 },
+  { 10, 0, 35, 25 },
+  { 15, 35, 0, 30 },
+  { 20, 25, 30, 0 }
+};  </code></pre></div>
+<p><code>Ouput: 80</code></p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>// Java program to find the shortest possible route
+// that visits every city exactly once and returns to
+// the starting point using memoization and bitmasking
+ 
+import java.util.*;
+
+  class GfG {
+ 
+      static int totalCost(int mask, int pos, int n,
+                                int[][] cost) {
+        
+        // Base case: if all cities are visited, return the
+        // cost to return to the starting city (0)
+        if (mask == (1 &lt;&lt; n) - 1) {
+            return cost[pos][0];
+        }
+
+        int ans = Integer.MAX_VALUE;
+
+        // Try visiting every city that has not been visited
+        // yet
+        for (int i = 0; i &lt; n; i++) {
+            if ((mask &amp; (1 &lt;&lt; i)) == 0) {
+              
+                // If city i is not visited, visit it and
+                // update the mask
+                ans = Math.min(ans, cost[pos][i]+ totalCost(mask | (1 &lt;&lt; i), i, 
+                                                            n, cost));
+            }
+        }
+
+        return ans;
+    }
+ 
+      static int tsp(int[][] cost) {
+        int n = cost.length;
+        
+      // Start from city 0, and only city 0 is
+      // visited initially (mask = 1)
+        return totalCost(1, 0, n, cost);  
+    }
+
+    public static void main(String[] args) {
+        
+        int[][] cost = { { 0, 10, 15, 20 },
+                         { 10, 0, 35, 25 },
+                         { 15, 35, 0, 30 },
+                         { 20, 25, 30, 0 } };
+      
+        int res = tsp(cost);
+ 
+        System.out.println(res);
+    }
+}</code></pre></div>
+<hr>
+<h1 id="sieve-of-eratosthenes">Sieve of Eratosthenes</h1>
+<h1 id="given-a-positive-integern-calculate-and-return-all-prime-numbers-less-than-or-equal-tonusing-thesieve-of-eratosthenesalgorithm">Given a positive integer <strong>n</strong>, calculate and return all prime numbers less than or equal to <strong>n</strong> using the <strong>Sieve of Eratosthenes</strong> algorithm.</h1>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-Input:">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-Input:" data-lang="Input:">Output: [2, 3, 5, 7]
+Explanation: Prime numbers less than equal to 10 are 2, 3, 5 and 7.</code></pre></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>class Solution {
+    public int[] sieve(int n) {
+        // code here
+        boolean[] isPrime = new boolean[n + 1];
+        Arrays.fill(isPrime, true);
+        
+        List&lt;Integer&gt; prime = new ArrayList&lt;&gt;();
+        
+        isPrime[0] = false;
+        isPrime[1] = false;
+        
+        for(int i = 2; i * i &lt;= n; i++){
+            if(isPrime[i] == true){
+                for(int j = i * i; j &lt;= n; j += i){
+                    isPrime[j] = false;
+                }
+            }
+        }
+        for(int i = 2; i &lt;= n; i++){
+            if(isPrime[i] == true){
+                prime.add(i);
+            }
+        }
+        
+        int[] result = new int[prime.size()];
+        
+        for(int i = 0; i &lt; prime.size(); i++){
+            result[i] = prime.get(i);
+        }
+        
+        return result;
+    }
+    }</code></pre></div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/hard-problems/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fhariprasath112005.github.io%2fhariblog%2fposts%2fblogs%2fhard-problems%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/hariblog/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hariblog/posts/blogs/important-stuffs/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/hariblog/posts/blogs/data-structures/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.131.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/hariblog/js/theme.min.js"></script></body>
+</html>
