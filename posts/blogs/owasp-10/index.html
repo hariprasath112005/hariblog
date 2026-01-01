@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - Hari&#39;s Blog</title><meta name="Description" content=" "><meta property="og:url" content="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/">
+  <meta property="og:site_name" content="Hari&#39;s Blog">
+  <meta property="og:title" content="Hari&#39;s Blog">
+  <meta property="og:description" content="It is a regularly Updated document containing security concerns and risks for web application security, focusing on 10 most critical risks.
+Broken Access Control Access Control refers to a system having control to a information or functionality. Broken Access Controls allow attackers to bypass authorization and perform task as they were administrators. Access Control can by secured by making web application provide proper authorization tokens Cryptographic Failures Web applications should protect their sensitive data by using encryption.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hari&#39;s Blog">
+  <meta name="twitter:description" content="It is a regularly Updated document containing security concerns and risks for web application security, focusing on 10 most critical risks.
+Broken Access Control Access Control refers to a system having control to a information or functionality. Broken Access Controls allow attackers to bypass authorization and perform task as they were administrators. Access Control can by secured by making web application provide proper authorization tokens Cryptographic Failures Web applications should protect their sensitive data by using encryption.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/" /><link rel="prev" href="https://hariprasath112005.github.io/hariblog/posts/blogs/string-problems/" /><link rel="next" href="https://hariprasath112005.github.io/hariblog/posts/blogs/networking/" /><link rel="stylesheet" href="/hariblog/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/owasp-10\/"
+        },"genre": "posts","wordcount":  803 ,
+        "url": "https:\/\/hariprasath112005.github.io\/hariblog\/posts\/blogs\/owasp-10\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Hariprasath"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/hariblog/" title="Hari&#39;s Blog">Hari&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/hariblog/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Hariprasath</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;803 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#broken-access-control">Broken Access Control</a></li>
+    <li><a href="#cryptographic-failures">Cryptographic Failures</a></li>
+    <li><a href="#injection">Injection</a></li>
+    <li><a href="#insecure-design">Insecure Design</a></li>
+    <li><a href="#security-misconfiguration">Security Misconfiguration</a></li>
+    <li><a href="#vulnerable-and-outdated-components">Vulnerable and Outdated Components</a></li>
+    <li><a href="#identification-and-authentication-failures">Identification and Authentication Failures</a></li>
+    <li><a href="#software-and-data-integrity-failures">Software and Data Integrity Failures</a></li>
+    <li><a href="#security-logging-and-monitoring-failures">Security Logging and Monitoring Failures</a></li>
+    <li><a href="#server-side-request-forgery"> Server-Side Request Forgery</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>It is a regularly Updated document containing security concerns and risks for web application security, focusing on 10 most critical risks.</p>
+<h2 id="broken-access-control">Broken Access Control</h2>
+<ul>
+<li>Access Control refers to a system having control to a information or functionality.</li>
+<li>Broken Access Controls allow attackers to bypass authorization and perform task as they were administrators.</li>
+<li>Access Control can by secured by making web application provide proper authorization tokens</li>
+</ul>
+<h2 id="cryptographic-failures">Cryptographic Failures</h2>
+<ul>
+<li>Web applications should protect their sensitive data by using encryption.</li>
+<li>Or else attackers will get the data and use it for various purpose.</li>
+<li>The risk of data exposure can be minimised by encryption all sensitive data, authenticating all transmission and disabling caching.</li>
+</ul>
+<h2 id="injection">Injection</h2>
+<ul>
+<li>Injection attack happens when untrusted data is sent to the code interpreter through a form input or some other way of data submission in the web application.</li>
+<li>A attacker could enter a sql database code into a form that expects username in plaintext. and if the form field is not properly secured, the code will execute.</li>
+<li>Cross site scripting is also a injection attack.</li>
+<li>Injection attacks can be prevented by sanitising/validating the inputs.</li>
+</ul>
+<h2 id="insecure-design">Insecure Design</h2>
+<ul>
+<li>Insecure Design includes a range of weakness that can be embedded in the architecture of an application.</li>
+<li>It focuses on the design rather than the implementation.</li>
+<li>For example security questions like &ldquo;which street do you grew up on?&rdquo; for password recovery as one example that is insecure by design.</li>
+<li>No matter how much the design is perfect, the system is vulnerable.</li>
+</ul>
+<h2 id="security-misconfiguration">Security Misconfiguration</h2>
+<ul>
+<li>Security misconfiguration is the most common vulnerability on the list, and is often the result of using default configurations or displaying excessively verbose errors.</li>
+<li>This can be mitigated by removing any unused features in the code and ensuring that error messages are more general.</li>
+<li> XML External Entities (XEE) attack - This is an attack against a web application that parses XML* input.</li>
+<li>An XML parser can be duped into sending data to an unauthorized external entity (hard drive), which can pass sensitive data directly to an attacker</li>
+<li>The best ways to prevent XEE attacks are to have web applications accept a less complex type of data, such as JSON</li>
+</ul>
+<h2 id="vulnerable-and-outdated-components">Vulnerable and Outdated Components</h2>
+<ul>
+<li>Many modern web developers use components such as libraries and frameworks in their web applications.</li>
+<li>Some attackers look for vulnerabilities in these components which they can then use to orchestrate attacks</li>
+<li>Some of the more popular components are used on hundreds of thousands of websites; an attacker finding a security hole in one of these components could leave hundreds of thousands of sites vulnerable to exploit.</li>
+<li>To minimize the risk of running components with known vulnerabilities, developers should remove unused components from their projects, as well as ensure that they are receiving components from a trusted source that are up to date.</li>
+</ul>
+<h2 id="identification-and-authentication-failures">Identification and Authentication Failures</h2>
+<ul>
+<li>Vulnerabilities in authentication (login) systems can give attackers access to user accounts and even the ability to compromise an entire system using an admin account.</li>
+<li>Some strategies to mitigate authentication vulnerabilities are requiring <a href="https://www.cloudflare.com/learning/access-management/what-is-two-factor-authentication/" target="_blank" rel="noopener noreffer ">two-factor authentication (2FA)</a> as well as limiting or delaying repeated login attempts using <a href="https://www.cloudflare.com/rate-limiting/" target="_blank" rel="noopener noreffer ">rate limiting</a>.</li>
+</ul>
+<h2 id="software-and-data-integrity-failures">Software and Data Integrity Failures</h2>
+<ul>
+<li>Many applications today rely on third-party plugins and other external sources for their functionality, and they do not always make sure that updates and data from those sources have not been tampered with and originate from an expected location</li>
+<li>This category also includes insecure deserialization exploits: these attacks are the result of deserializing data from untrusted sources, and they can result in serious consequences like <a href="https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/" target="_blank" rel="noopener noreffer ">DDoS attacks</a> and remote code execution attacks.</li>
+<li>To help ensure data and updates have not had their integrity violated, application developers should use digital signatures to verify updates, check their software <a href="https://www.cloudflare.com/learning/security/what-is-a-supply-chain-attack/" target="_blank" rel="noopener noreffer ">supply chains</a>, and ensure that continuous integration/continuous deployment (CI/CD) pipelines have strong access control and are configured correctly.</li>
+</ul>
+<h2 id="security-logging-and-monitoring-failures">Security Logging and Monitoring Failures</h2>
+<ul>
+<li>Many web applications are not taking enough steps to detect data breaches. The average discovery time for a breach is around 200 days after it has happened</li>
+<li> OWASP recommends that web developers should implement logging and monitoring as well as incident response plans to ensure that they are made aware of attacks on their applications.</li>
+</ul>
+<h2 id="server-side-request-forgery"> Server-Side Request Forgery</h2>
+<ul>
+<li>Server-Side Request Forgery (SSRF) is an attack in which someone sends a URL request to a server that causes the server to fetch an unexpected resource, even if that resource is otherwise protected</li>
+<li>An attacker might, for example, send a request for <code>www.example.com/super-secret-data/</code>, even though web users are not supposed to be able to navigate to that location, and get access to super secret data from the server&rsquo;s response.</li>
+<li>There are a number of possible mitigations for SSRF attacks, and one of the most important is to validate all URLs coming from clients. Invalid URLs should not result in a direct, raw response from the server.</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://hariprasath112005.github.io/hariblog/posts/blogs/owasp-10/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fhariprasath112005.github.io%2fhariblog%2fposts%2fblogs%2fowasp-10%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/hariblog/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hariblog/posts/blogs/string-problems/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
+            <a href="/hariblog/posts/blogs/networking/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.131.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/hariblog/" target="_blank">Hariprasath</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/hariblog/js/theme.min.js"></script></body>
+</html>
