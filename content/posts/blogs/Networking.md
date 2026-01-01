@@ -1,3 +1,11 @@
+---
+title: Networking
+date: 2026-01-01
+draft: false
+tags:
+  - Networking
+  - Placement_Preparation
+---
 # Protocol and its Port
 
 | Protocol   | Port    |

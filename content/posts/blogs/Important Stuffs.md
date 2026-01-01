@@ -1,4 +1,11 @@
-
+---
+title: Important Stuffs
+date: 2026-01-01
+draft: false
+tags:
+  - Placement_Preparation
+  - Programming
+---
 # convert binary to Integer
 
 ## Explanation: Multiply the digit from last to the 2^i++ and append the value to a variable.

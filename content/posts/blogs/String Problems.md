@@ -1,5 +1,11 @@
-
-
+---
+title: String Problems
+date: 2026-01-01
+draft: false
+tags:
+  - Programming
+  - Placement_Preparation
+---
 # Longest Palindromic SubString 
 
 Explanation: Given a string ****s****, find the longest substring which is a palindrome. If there are multiple answers, then find the first appearing substring.

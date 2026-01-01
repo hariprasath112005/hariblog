@@ -1,5 +1,11 @@
-	
-
+---
+title: Array Problems
+date: 2026-01-01
+draft: false
+tags:
+  - Programming
+  - Placement_Preparation
+---
 # Element with Left side smaller than Right side greater
 
 `Input : [4, 2, 5, 7]`

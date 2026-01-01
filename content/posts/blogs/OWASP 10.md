@@ -1,4 +1,10 @@
-
+---
+title: OWASP 10
+date: 2026-01-01
+draft: false
+tags:
+  - Placement_Preparation
+---
 It is a regularly Updated document containing security concerns and risks for web application security, focusing on 10 most critical risks.
 
 

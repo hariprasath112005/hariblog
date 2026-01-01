@@ -1,6 +1,11 @@
-
-
-
+---
+title: Hard Problems
+date: 2026-01-01
+draft: false
+tags:
+  - Placement_Preparation
+  - Programming
+---
 # Travel Salesman Problem (TSP)
 
 Explanation: Given a ****2d matrix cost[][]**** of ****size n**** where ****cost[i][j]**** denotes the cost of moving from ****city i to city j.**** The task is to complete a ****tour**** from ****city 0 (0-based index)**** to all other cities such that we visit each city ****exactly once**** and then at the end come back to ****city 0**** at minimum cost. 

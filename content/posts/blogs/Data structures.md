@@ -1,4 +1,11 @@
-
+---
+title: Data structures
+date: 2026-01-01
+draft: false
+tags:
+  - Programming
+  - Placement_Preparation
+---
 # Time Complexity
 
 ## Big O Notation
