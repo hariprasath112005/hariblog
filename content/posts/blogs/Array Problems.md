@@ -61,7 +61,7 @@ tags:
 ------------------------------------------------------------------
 # Counting Elements in two arrays
 
-`Input: A: [4, 8, 7, 5, 1] B: [4, 48, 3, 0, 1, 1, 15`
+`Input: A: [4, 8, 7, 5, 1] B: [4, 48, 3, 0, 1, 1, 15]`
 `Output: [5, 6, 6, 6, 3]`
 
 Explanation: A[0] = 4, which is 5 elements lesser than 4 in the B array. return those count for each element in A.
@@ -283,7 +283,7 @@ class Solution {
 `output: 'I Love Programming'`
 
 1. create a StringBuilder and append the first character which is converted to uppercase (Character.toUpperCase());
-2. then traverse through the string by using split().
+2. then traverse through the string by using split(). ' \\\s+'
 3. get the character in a variable and check for the previous values (i - 1) is space or not.
 4. if True; append the value which should be converted to upper.
 5. else; append the character to the stringbuilder
